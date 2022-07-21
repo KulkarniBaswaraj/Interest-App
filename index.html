@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interest Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h3>Interest Calculation (ಬಡ್ಡಿ ಲೆಕ್ಕಾಚಾರ)</h3>
+    <div class="card">
+        <label class="input">
+            <input class="input__field" type="text" id="principal" />
+            <span class="input__label">Principal</span>
+        </label>
+        <br>
+        <label class="input">
+            <input class="input__field" type="text" id="interest" />
+            <span class="input__label">Interest Rate </span>
+        </label>
+        <br>
+        <div class="tp-block">
+            <label class="input">
+                <input class="input__field" type="text" id="time-period" />
+                <span class="input__label">Time Period </span>
+            </label>
+            <select id="select_timePeriod" onchange="onTimePeriodChange()">
+                <option id="months">Months</option>
+                <option id="years">Years</option>
+                <option id="days">Days</option>
+            </select>
+        </div>
+ <br>
+    <div class="btn-container">
+        <button onclick="calculate()">CALCULATE</button>
+    </div>
+    </div>
+    <p id="principal_Amount"></p>
+    <p id="interest-rate"></p>
+    <p id="total"></p>
+    <script src="script.js"></script>
+</body>
+
+</html>
