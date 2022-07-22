@@ -13,18 +13,18 @@
     <h3>Interest Calculation (ಬಡ್ಡಿ ಲೆಕ್ಕಾಚಾರ)</h3>
     <div class="card">
         <label class="input">
-            <input class="input__field" type="text" id="principal" />
+            <input class="input__field" type="text" id="principal" onkeyup="validate()" />
             <span class="input__label">Principal</span>
         </label>
         <br>
         <label class="input">
-            <input class="input__field" type="text" id="interest" />
+            <input class="input__field" type="text" id="interest"  onkeyup="validate()"/>
             <span class="input__label">Interest Rate </span>
         </label>
         <br>
         <div class="tp-block">
             <label class="input">
-                <input class="input__field" type="text" id="time-period" />
+                <input class="input__field" type="text" id="time-period"  onkeyup="validate()"/>
                 <span class="input__label">Time Period </span>
             </label>
             <select id="select_timePeriod" onchange="onTimePeriodChange()">
@@ -35,12 +35,14 @@
         </div>
  <br>
     <div class="btn-container">
-        <button onclick="calculate()">CALCULATE</button>
+        <button id="calc-btn" onclick="calculate()">CALCULATE</button>
+        <button onclick="clearAll()">CLEAR</button>
     </div>
     </div>
     <p id="principal_Amount"></p>
     <p id="interest-rate"></p>
     <p id="total"></p>
+
     <script src="script.js"></script>
 </body>
 
